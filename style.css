@@ -1,0 +1,78 @@
+/* --------------Global Styles -------------- */
+        body {
+            background-color:black;
+            color: white;
+            font-family: 'Alumni Sans', sans-serif;
+            overflow:hidden;
+        }
+        /* -------------- Typography -------------- */
+        h1{
+            font-weight:300;
+            font-size:20px;
+        }
+        h2{
+            font-weight:300;
+            font-size:15px;
+        }
+        /* -------------- Layouts -------------- */
+        section{
+            height:100vh;
+            width:100vw;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+        }
+        img{
+            display:inline-block;
+        }
+        /* -------------- Animations -------------- */
+        .circle1, .circle2, .circle3
+        {
+            position:absolute;
+            min-height:200px;
+            min-width:200px;
+            background-color:blue;
+            display:inline-block;
+            z-index:-1;
+            border-radius:50%;
+            filter:blur(60px);
+            animation: animate 1s linear infinite alternate;
+        }
+        .waiting {
+            position:absolute;
+            background-color:transparent;
+            width:25px;
+            height:25px;
+            top:70%;
+            border-radius:50%;
+            border:2px dashed white;
+            animation:rotate 2s linear infinite forwards;
+        }
+        /* -------------- Keyframes -------------- */
+        @keyframes rotate {
+            0%{
+                transform:rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg);
+            }
+        }
+        @keyframes animate {
+            0%{
+                filter:blur(100px);
+            }
+            100%{
+                filter:blur(70px);
+            }
+        }
+        /* -------------- Specific Classes -------------- */
+        .blur-circle1{
+            bottom:45%;
+        }
+        .blur-circle2{
+            right:54%;
+        }
+        .blur-circle3{
+            left:54%;
+        }
